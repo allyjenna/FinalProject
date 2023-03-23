@@ -7,7 +7,7 @@ public class SwitchController : MonoBehaviour
 {
     [SerializeField] private float dragDistance = 1f;
     [SerializeField] private float dragDuration = 0.5f;
-    [SerializeField] private UnityEvent onSwitchDown;
+    [SerializeField] public UnityEvent onSwitchDown;
 
     private bool isDragging = false;
     private Vector3 dragStartPosition;
@@ -45,12 +45,22 @@ public class SwitchController : MonoBehaviour
         isDragging = false;
     }
 
-    private IEnumerator SwitchDownCoroutine()
+    public IEnumerator SwitchDownCoroutine()
     {
         // Wait for a moment before calling the event
         yield return new WaitForSeconds(dragDuration);
 
-        // Call the onSwitchDown event
-        onSwitchDown.Invoke();
+        // Check if the onSwitchDown event is subscribed to
+        if (onSwitchDown != null)
+        {
+            Debug.Log("onSwitchDown event is subscribed to");
+            // Call the onSwitchDown event
+            onSwitchDown.Invoke();
+        }
+        else
+        {
+            Debug.Log("onSwitchDown event is not subscribed to");
+        }
     }
+
 }
