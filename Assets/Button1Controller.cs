@@ -35,15 +35,19 @@ public class Button1Controller : MonoBehaviour
 
     public void OnMouseDown()
     {
-        // Play the push animation when the button is clicked
-        GetComponent<Animator>().SetTrigger("push");
-        Debug.Log("Button1Controller: Button pushed, playing push animation");
+        if (switchController.isSwitchDown)
+        {
+            // Play the push animation when the button is clicked
+            GetComponent<Animator>().SetTrigger("push");
+            Debug.Log("Button1Controller: Button pushed, playing push animation");
 
-        // Set the ButtonClicked parameter to true
-        GetComponent<Animator>().SetBool("push", true);
+            // Set the ButtonClicked parameter to true
+            GetComponent<Animator>().SetBool("push", true);
 
-        // Destroy the rope1 game object when the button is clicked
-        Destroy(rope1);
-        Debug.Log("Button1Controller: Rope1 destroyed");
+            // Destroy the rope1 game object when the button is clicked
+            Destroy(rope1);
+            Debug.Log("Button1Controller: Rope1 destroyed");
+        }
     }
+
 }

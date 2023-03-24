@@ -9,7 +9,7 @@ public class SwitchController : MonoBehaviour
     [SerializeField] private float dragDuration = 0.5f;
     [SerializeField] public UnityEvent onSwitchDown;
 
-    private bool isSwitchDown = false;
+    public bool isSwitchDown = false;
 
     void OnMouseDown()
     {
