@@ -5,10 +5,23 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
-  - Forest
-  - Moon
-  - Mushroom
   - Switch
+  - Lock Camera
+  - Note
+  - Door
+  - Clipboard
+  - Swamp
+  - Crypt
+  - Sand
+  - QuestionMark1
+  - QuestionMark2
+  - QuestionMark3
+  - Object1
+  - Object2
+  - Object3
+  - Object1Replace
+  - Object2Replace
+  - Object3Replace
   layers:
   - Default
   - TransparentFX

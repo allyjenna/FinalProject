@@ -17,15 +17,15 @@ public class ScreenSwitch : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Mushroom"))
+        if (other.CompareTag("Swamp"))
         {
             SceneManager.LoadScene(1);
         }
-        else if (other.CompareTag("Moon"))
+        else if (other.CompareTag("Crypt"))
         {
             SceneManager.LoadScene(2);
         }
-        else if (other.CompareTag("Forest"))
+        else if (other.CompareTag("Sand"))
         {
             SceneManager.LoadScene(3);
         }

@@ -9,44 +9,31 @@ public class SwitchController : MonoBehaviour
     [SerializeField] private float dragDuration = 0.5f;
     [SerializeField] public UnityEvent onSwitchDown;
 
-    private bool isDragging = false;
-    private Vector3 dragStartPosition;
+    private bool isSwitchDown = false;
 
     void OnMouseDown()
     {
-        // Record the start position of the drag
-        isDragging = true;
-        dragStartPosition = Input.mousePosition;
-    }
+        Debug.Log("OnMouseDown");
 
-    void OnMouseDrag()
-    {
-        if (isDragging)
+        if (!isSwitchDown)
         {
-            // Calculate the distance and direction of the drag
-            float dragDistancePixels = Input.mousePosition.y - dragStartPosition.y;
-            float dragDistanceWorld = dragDistancePixels * dragDistance / Screen.height;
+            Debug.Log("Switching down");
 
             // Rotate the switch downward
-            float rotationAngle = Mathf.Clamp(dragDistanceWorld, -dragDistance, 0f);
-            transform.localRotation = Quaternion.Euler(rotationAngle, 0f, 0f);
+            transform.localRotation = Quaternion.Euler(-dragDistance, 0f, 0f);
 
-            // Check if the switch has been dragged all the way down
-            if (rotationAngle <= -dragDistance)
-            {
-                isDragging = false;
-                StartCoroutine(SwitchDownCoroutine());
-            }
+            // Set isSwitchDown to true
+            isSwitchDown = true;
+
+            // Start the coroutine to trigger the onSwitchDown event
+            StartCoroutine(SwitchDownCoroutine());
         }
-    }
-
-    void OnMouseUp()
-    {
-        isDragging = false;
     }
 
     public IEnumerator SwitchDownCoroutine()
     {
+        Debug.Log("SwitchDownCoroutine started");
+
         // Wait for a moment before calling the event
         yield return new WaitForSeconds(dragDuration);
 
@@ -54,6 +41,7 @@ public class SwitchController : MonoBehaviour
         if (onSwitchDown != null)
         {
             Debug.Log("onSwitchDown event is subscribed to");
+
             // Call the onSwitchDown event
             onSwitchDown.Invoke();
         }
@@ -62,5 +50,4 @@ public class SwitchController : MonoBehaviour
             Debug.Log("onSwitchDown event is not subscribed to");
         }
     }
-
 }
