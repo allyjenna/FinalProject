@@ -1,8 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
-
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Button2Controller : MonoBehaviour
 {
@@ -10,20 +9,29 @@ public class Button2Controller : MonoBehaviour
 
     public void OnMouseDown()
     {
-        int SceneIndex2 = FindObjectOfType<Object2Controller>().GetSceneIndex();
+        SceneController sceneController = FindObjectOfType<SceneController>();
 
-        if (SceneIndex2 == 2)
+        if (sceneController != null)
         {
-            // Play the push animation when the button is clicked
-            GetComponent<Animator>().SetTrigger("push");
-            Debug.Log("Button1Controller: Button pushed, playing push animation");
+            int sceneIndex2 = Object1Controller.sceneIndex;
 
-            // Set the ButtonClicked parameter to true
-            GetComponent<Animator>().SetBool("push", true);
+            if (sceneIndex2 == 1)
+            {
+                // Play the push animation when the button is clicked
+                GetComponent<Animator>().SetTrigger("push");
+                Debug.Log("Button2Controller: Button pushed, playing push animation");
 
-            // Destroy the rope1 game object when the button is clicked
-            Destroy(rope2);
-            Debug.Log("Button2Controller: Rope2 destroyed");
+                // Set the ButtonClicked parameter to true
+                GetComponent<Animator>().SetBool("push", true);
+
+                // Destroy the rope2 game object when the button is clicked
+                Destroy(rope2);
+                Debug.Log("Button2Controller: Rope2 destroyed");
+            }
+        }
+        else
+        {
+            Debug.Log("Button2Controller: SceneController not found!");
         }
     }
 }
