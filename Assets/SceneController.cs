@@ -11,6 +11,7 @@ public class SceneController : MonoBehaviour
     public GameObject object1Replace;
     public GameObject object2Replace;
     public GameObject object3Replace;
+    public GameObject door;
 
     private void Start()
     {
@@ -21,6 +22,7 @@ public class SceneController : MonoBehaviour
         object1Replace.SetActive(false);
         object2Replace.SetActive(false);
         object3Replace.SetActive(false);
+        door.SetActive(false);
         CheckSceneIndex();
     }
 
@@ -60,6 +62,7 @@ public class SceneController : MonoBehaviour
             object1Replace.SetActive(true); // show Object1Replace
             object2Replace.SetActive(true); // show 
             object3Replace.SetActive(true); // show
+            door.SetActive(true);
             Debug.Log("Showing Object3Replace");
 
         }

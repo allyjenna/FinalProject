@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Painting2-crypt.unity
     guid: ded050078d4ab45a1b80dc33d86ef426
   - enabled: 1
-    path: Assets/Scenes/Painting3-Sand.unity
+    path: Assets/Scenes/Painting3-sand.unity
     guid: b089b7aafc75642d8a0af79540fba457
+  - enabled: 1
+    path: Assets/Scenes/Hospital.unity
+    guid: cdb2cecdc9e774abb8b62faa6112fe4a
   m_configObjects: {}
