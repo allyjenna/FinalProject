@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Object1Replace
+  - Switch
+  - Object3Replace
+  - QuestionMark2
+  - Sand
+  - Crypt
+  - Swamp
+  - QuestionMark3
+  - QuestionMark1
+  - Object2Replace
+  - FlashlightObject
   layers:
   - Default
   - TransparentFX

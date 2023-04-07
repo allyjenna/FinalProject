@@ -16,6 +16,7 @@ public class LockCamera : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Entered trigger zone");
             mainCamera.enabled = false;
             lockCamera.enabled = true;
             lockCamera.transform.position = target.position;
@@ -27,6 +28,7 @@ public class LockCamera : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Exited trigger zone");
             lockCamera.enabled = false;
             mainCamera.enabled = true;
         }
