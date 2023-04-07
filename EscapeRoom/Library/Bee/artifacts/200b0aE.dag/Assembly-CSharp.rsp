@@ -368,6 +368,7 @@
 "Assets/Scripts/Button2Controller.cs"
 "Assets/Scripts/Button3Controller.cs"
 "Assets/Scripts/CameraController.cs"
+"Assets/Scripts/Emission.cs"
 "Assets/Scripts/FinalDoorController.cs"
 "Assets/Scripts/FloatObject.cs"
 "Assets/Scripts/Object1Controller.cs"
