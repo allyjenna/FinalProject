@@ -361,10 +361,10 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Extras/Joystick Pack/Scripts/Editor/DynamicJoystickEditor.cs"
-"Assets/Extras/Joystick Pack/Scripts/Editor/FloatingJoystickEditor.cs"
-"Assets/Extras/Joystick Pack/Scripts/Editor/JoystickEditor.cs"
-"Assets/Extras/Joystick Pack/Scripts/Editor/VariableJoystickEditor.cs"
+"Assets/Objects/Keypad/Extras/Joystick Pack/Scripts/Editor/DynamicJoystickEditor.cs"
+"Assets/Objects/Keypad/Extras/Joystick Pack/Scripts/Editor/FloatingJoystickEditor.cs"
+"Assets/Objects/Keypad/Extras/Joystick Pack/Scripts/Editor/JoystickEditor.cs"
+"Assets/Objects/Keypad/Extras/Joystick Pack/Scripts/Editor/VariableJoystickEditor.cs"
 -langversion:9.0
 
 /deterministic

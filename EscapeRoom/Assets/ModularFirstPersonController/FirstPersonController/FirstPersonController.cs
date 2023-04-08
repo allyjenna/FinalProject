@@ -153,9 +153,10 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
-        
+        if (lockCursor)
+        {
             Cursor.lockState = CursorLockMode.Locked;
-        
+        }
 
         if (crosshair)
         {
@@ -206,10 +207,9 @@ public class FirstPersonController : MonoBehaviour
 
         if (lockCamera.enabled == true)
         {
-            Cursor.visible = true;
-
+            Cursor.lockState = CursorLockMode.Confined;
         }
-        else
+        if (playerCamera.enabled == true)
         {
             Cursor.lockState = CursorLockMode.Locked;
 
