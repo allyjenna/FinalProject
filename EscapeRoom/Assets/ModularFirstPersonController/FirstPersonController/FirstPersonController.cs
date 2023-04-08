@@ -16,11 +16,13 @@ using UnityEngine.UI;
 
 public class FirstPersonController : MonoBehaviour
 {
+
     private Rigidbody rb;
 
     #region Camera Movement Variables
 
     public Camera playerCamera;
+    public Camera lockCamera;
 
     public float fov = 60f;
     public bool invertCamera = false;
@@ -29,7 +31,7 @@ public class FirstPersonController : MonoBehaviour
     public float maxLookAngle = 50f;
 
     // Crosshair
-    public bool lockCursor = true;
+    public bool lockCursor =true;
     public bool crosshair = true;
     public Sprite crosshairImage;
     public Color crosshairColor = Color.white;
@@ -151,12 +153,11 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
-        if(lockCursor)
-        {
+        
             Cursor.lockState = CursorLockMode.Locked;
-        }
+        
 
-        if(crosshair)
+        if (crosshair)
         {
             crosshairObject.sprite = crosshairImage;
             crosshairObject.color = crosshairColor;
@@ -202,10 +203,21 @@ public class FirstPersonController : MonoBehaviour
 
     private void Update()
     {
+
+        if (lockCamera.enabled == true)
+        {
+            Cursor.visible = true;
+
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+
+        }
         #region Camera
 
         // Control camera movement
-        if(cameraCanMove)
+        if (cameraCanMove)
         {
             yaw = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * mouseSensitivity;
 
@@ -561,6 +573,8 @@ public class FirstPersonController : MonoBehaviour
         EditorGUILayout.Space();
 
         fpc.playerCamera = (Camera)EditorGUILayout.ObjectField(new GUIContent("Camera", "Camera attached to the controller."), fpc.playerCamera, typeof(Camera), true);
+        fpc.lockCamera = (Camera)EditorGUILayout.ObjectField(new GUIContent("Lock Camera", "Camera attached to the lock."), fpc.lockCamera, typeof(Camera), true);
+
         fpc.fov = EditorGUILayout.Slider(new GUIContent("Field of View", "The camera’s view angle. Changes the player camera directly."), fpc.fov, fpc.zoomFOV, 179f);
         fpc.cameraCanMove = EditorGUILayout.ToggleLeft(new GUIContent("Enable Camera Rotation", "Determines if the camera is allowed to move."), fpc.cameraCanMove);
 
