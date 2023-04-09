@@ -29,11 +29,10 @@ public class keypad : MonoBehaviour
     public GameObject objectToEnable;
     public GameObject player;
     public GameObject doormove;
-    public GameObject doormoveClass;
     public GameObject keypadmove;
     public Vector3 targetPosition;
     public GameObject targetCollider;
-    public float maxDistance = 10f;
+    public float maxDistance = 15f;
 
 
 
@@ -62,7 +61,6 @@ public class keypad : MonoBehaviour
         lockCamera.enabled = false;
         doormove.SetActive(true);
         doormove.SetActive(true);
-        doormoveClass.SetActive(true);
         keypadmove.SetActive(true);
 
 
@@ -126,7 +124,6 @@ public class keypad : MonoBehaviour
         keypadScreen = false;
         player.transform.position = targetPosition;
         doormove.SetActive(false);
-        doormoveClass.SetActive(false);
         keypadmove.SetActive(false);
     }
 
@@ -165,7 +162,6 @@ public class keypad : MonoBehaviour
                 }
                 else if (selection.CompareTag("keypad"))
                 {
-                    Debug.Log("Keypad screen is being displayed!");
 
                     keypadScreen = true;
 
