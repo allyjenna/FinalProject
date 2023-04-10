@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cartoon science equipment
+* source:	https://sketchfab.com/3d-models/cartoon-science-equipment-9ca00388476e41dcb07a9a1edb1a6800
+* author:	brendan wood (https://sketchfab.com/brendanwood872)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cartoon science equipment" (https://sketchfab.com/3d-models/cartoon-science-equipment-9ca00388476e41dcb07a9a1edb1a6800) by brendan wood (https://sketchfab.com/brendanwood872) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
