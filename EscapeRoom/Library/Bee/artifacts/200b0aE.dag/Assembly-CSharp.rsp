@@ -372,6 +372,7 @@
 "Assets/Objects/Q Vignette/Scripts/Q_Vignette_Base.cs"
 "Assets/Objects/Q Vignette/Scripts/Q_Vignette_Single.cs"
 "Assets/Objects/Q Vignette/Scripts/Q_Vignette_Split.cs"
+"Assets/PuddleController.cs"
 "Assets/Rooms/Tavern/CombinationPadLock/Script/MoveRuller.cs"
 "Assets/Rooms/Tavern/CombinationPadLock/Script/PadLockEmissionColor.cs"
 "Assets/Rooms/Tavern/CombinationPadLock/Script/PadLockPassword.cs"

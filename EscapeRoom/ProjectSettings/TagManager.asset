@@ -17,6 +17,7 @@ TagManager:
   - FlashlightObject
   - keypad
   - LockCamera
+  - Drop
   layers:
   - Default
   - TransparentFX
