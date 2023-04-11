@@ -4,6 +4,8 @@ using UnityEngine;
 public class PuddleController : MonoBehaviour
 {
     public AudioClip dropSound;
+    public AudioClip smoke;
+
     public float colorChangeAmount = 0.1f;
     public int maxDrops = 3;
     public GameObject drop;
@@ -13,11 +15,15 @@ public class PuddleController : MonoBehaviour
 
     private int currentDrops = 0;
     private AudioSource audioSource;
+    private AudioSource audioSource2;
+
     private Renderer puddleRenderer;
 
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource2 = GetComponent<AudioSource>();
+
         puddleRenderer = GetComponent<Renderer>();
         hidden.SetActive(true);
         reveal.SetActive(false);
@@ -47,6 +53,7 @@ public class PuddleController : MonoBehaviour
             {
                 Debug.Log("Puddle is fully red now!");
                 smokeParticles.Play();
+                audioSource2.PlayOneShot(smoke);
 
                 StartCoroutine(Text());
 
@@ -61,14 +68,8 @@ public class PuddleController : MonoBehaviour
         yield return new WaitForSeconds(4f);
         hidden.SetActive(false);
         reveal.SetActive(true);
-        StartCoroutine(Destroy());
     }
 
 
-    private IEnumerator Destroy()
-    {
-        yield return new WaitForSeconds(2f);
-        Destroy(smokeParticles);
-    }
-
+   
 }

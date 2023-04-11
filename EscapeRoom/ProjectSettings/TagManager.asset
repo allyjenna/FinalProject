@@ -18,6 +18,11 @@ TagManager:
   - keypad
   - LockCamera
   - Drop
+  - Note
+  - Lock Camera
+  - Door
+  - Clipboard
+  - Padlock
   layers:
   - Default
   - TransparentFX

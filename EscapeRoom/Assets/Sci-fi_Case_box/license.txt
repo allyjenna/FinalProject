@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sci-fi Case/box
+* source:	https://sketchfab.com/3d-models/sci-fi-casebox-c6d34dd2fd464debb9deed0f86f5e7ca
+* author:	TechnoCraft (https://sketchfab.com/TechnoCraft)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sci-fi Case/box" (https://sketchfab.com/3d-models/sci-fi-casebox-c6d34dd2fd464debb9deed0f86f5e7ca) by TechnoCraft (https://sketchfab.com/TechnoCraft) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -19,14 +19,17 @@ public class ScreenSwitch : MonoBehaviour
     {
         if (other.CompareTag("Swamp"))
         {
+            Debug.Log("Swamp");
             SceneManager.LoadScene(1);
         }
         else if (other.CompareTag("Crypt"))
         {
+            Debug.Log("Crypt");
             SceneManager.LoadScene(2);
         }
         else if (other.CompareTag("Sand"))
         {
+            Debug.Log("Sand");
             SceneManager.LoadScene(3);
         }
 

@@ -91,7 +91,7 @@ public class MoveRuller : MonoBehaviour
 
     void RotateRullers()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             _isActveEmission = true;
             _scroolRuller = 36;
@@ -105,7 +105,7 @@ public class MoveRuller : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             _isActveEmission = true;
             _scroolRuller = 36;

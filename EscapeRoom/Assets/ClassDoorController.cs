@@ -5,14 +5,14 @@ using UnityEngine;
 public class ClassDoorController : MonoBehaviour
 {
 
-    public GameObject doormoveClass;
+    public GameObject classDoor;
     public GameObject doorBlock;
     public GameObject targetCollider;
 
     // Start is called before the first frame update
     void Start()
     {
-        doormoveClass.SetActive(false);
+        classDoor.SetActive(false);
         doorBlock.SetActive(false);
     }
 
@@ -27,7 +27,7 @@ public class ClassDoorController : MonoBehaviour
         if (other.gameObject == targetCollider)
         {
             Debug.Log("COLLISION");
-            doormoveClass.SetActive(true); // Activate the door game object
+            classDoor.SetActive(true); // Activate the door game object
             doorBlock.SetActive(true); 
         }
     }
