@@ -23,6 +23,8 @@ TagManager:
   - Door
   - Clipboard
   - Padlock
+  - Object3
+  - EndButton
   layers:
   - Default
   - TransparentFX

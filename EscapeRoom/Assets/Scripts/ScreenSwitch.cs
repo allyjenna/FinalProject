@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ScreenSwitch : MonoBehaviour
-{ 
+{
+    public GameObject portal;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene(0);
-        }
+        //if (Input.GetKeyDown(KeyCode.R))
+        //{
+        //    SceneManager.LoadScene(0);
+        //}
     }
 
 
@@ -32,7 +33,10 @@ public class ScreenSwitch : MonoBehaviour
             Debug.Log("Sand");
             SceneManager.LoadScene(3);
         }
+        else if (other.gameObject == portal)
+        {
+            SceneManager.LoadScene(4);
+        }
 
-       
     }
 }

@@ -11,11 +11,14 @@ public class SceneController : MonoBehaviour
     public GameObject object1Replace;
     public GameObject object2Replace;
     public GameObject object3Replace;
-    public GameObject door;
+    public GameObject switch1;
+    public GameObject switch2;
+    public GameObject box;
     public GameObject player;
     public Vector3 targetPosition1;
     public Vector3 targetPosition2;
     public Vector3 targetPosition3;
+    public GameObject galleryDoor;
 
 
 
@@ -28,8 +31,13 @@ public class SceneController : MonoBehaviour
         object1Replace.SetActive(false);
         object2Replace.SetActive(false);
         object3Replace.SetActive(false);
-        //door.SetActive(false);
-        door.SetActive(true);
+        switch1.SetActive(true);
+        switch2.SetActive(false);
+        box.SetActive(false);
+        galleryDoor.SetActive(true);
+
+
+
 
         CheckSceneIndex();
     }
@@ -50,7 +58,12 @@ public class SceneController : MonoBehaviour
         {
             questionMark1.SetActive(false); // hide QuestionMark1
             object1Replace.SetActive(true); // show Object1Replace
+            galleryDoor.SetActive(true);
+            switch1.SetActive(false);
+            switch2.SetActive(true);
             player.transform.position = targetPosition1;
+            player.transform.rotation = Quaternion.Euler(0f, 90f, 0f); // Rotate 90 degrees on Y-axis
+
 
             Debug.Log("Showing Object1Replace");
         }
@@ -60,7 +73,12 @@ public class SceneController : MonoBehaviour
             questionMark2.SetActive(false); // hide 
             object1Replace.SetActive(true); // show Object1Replace
             object2Replace.SetActive(true); // show
+            galleryDoor.SetActive(true);
+            switch1.SetActive(false);
+            switch2.SetActive(true);
             player.transform.position = targetPosition2;
+            player.transform.rotation = Quaternion.Euler(0f, 90f, 0f); // Rotate 90 degrees on Y-axis
+
 
             Debug.Log("Showing Object2Replace");
 
@@ -73,8 +91,13 @@ public class SceneController : MonoBehaviour
             object1Replace.SetActive(true); // show Object1Replace
             object2Replace.SetActive(true); // show 
             object3Replace.SetActive(true); // show
-            door.SetActive(true);
+            box.SetActive(true);
+            galleryDoor.SetActive(true);
+            switch1.SetActive(false);
+            switch2.SetActive(true);
             player.transform.position = targetPosition3;
+            player.transform.rotation = Quaternion.Euler(0f, 90f, 0f); // Rotate 90 degrees on Y-axis
+
 
             Debug.Log("Showing Object3Replace");
 

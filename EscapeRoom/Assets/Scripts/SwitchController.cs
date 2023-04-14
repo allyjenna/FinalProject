@@ -7,9 +7,17 @@ public class SwitchController : MonoBehaviour
 {
     [SerializeField] private float dragDistance = 1f;
     [SerializeField] private float dragDuration = 0.5f;
+    [SerializeField] private AudioClip electricitySound;
+    [SerializeField] private AudioSource audioSource;
     [SerializeField] public UnityEvent onSwitchDown;
 
     public bool isSwitchDown = false;
+
+    void Start()
+    {
+        // Get the AudioSource component attached to this object
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void OnMouseDown()
     {
@@ -24,6 +32,12 @@ public class SwitchController : MonoBehaviour
 
             // Set isSwitchDown to true
             isSwitchDown = true;
+
+            // Play the electricity sound
+            if (electricitySound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(electricitySound);
+            }
 
             // Start the coroutine to trigger the onSwitchDown event
             StartCoroutine(SwitchDownCoroutine());
