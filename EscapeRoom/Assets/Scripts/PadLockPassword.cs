@@ -22,6 +22,8 @@ public class PadLockPassword : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip correct;
 
+    private bool playedsound = false;
+
 
 
 
@@ -60,7 +62,11 @@ public class PadLockPassword : MonoBehaviour
 
             }
 
-            audioSource.PlayOneShot(correct);
+            if (!playedsound)
+            {
+                audioSource.PlayOneShot(correct);
+                playedsound = true;
+            }
 
         }
     }
