@@ -33,6 +33,8 @@ public class keypad : MonoBehaviour
     public Vector3 targetPosition;
     public GameObject targetCollider;
     public float maxDistance = 15f;
+    public GameObject keypadGameObject;
+
 
 
 
@@ -88,6 +90,8 @@ public class keypad : MonoBehaviour
         {
             if (input == curPassword)
             {
+                keypadScreen = false;
+                keypadmove.SetActive(false);
                 //Load the next scene
                 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
@@ -125,6 +129,8 @@ public class keypad : MonoBehaviour
         player.transform.position = targetPosition;
         doormove.SetActive(false);
         keypadmove.SetActive(false);
+        keypadGameObject.SetActive(false);
+
     }
 
     private void OnTriggerEnter(Collider other)

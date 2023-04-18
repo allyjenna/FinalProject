@@ -20,20 +20,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - MyMainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 28684132378477856}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - MyGlossiness: 0.5
-    - MyLightAngle: 26.5
-    - MyMetallic: 0
-    - MyStrengthScalor: 50
     - _ColorMask: 15
     - _CullMode: 0
     - _FaceDilate: 0
@@ -61,17 +53,12 @@ Material:
     - _UnderlayOffsetX: 0
     - _UnderlayOffsetY: 0
     - _UnderlaySoftness: 0
-    - _UseUIAlphaClip: 0
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
     - _WeightBold: 0.75
     - _WeightNormal: 0
     m_Colors:
-    - MyColor: {r: 0.44203213, g: 0.28502133, b: 0.990566, a: 1}
-    - MyLightDirection: {r: -0, g: 0.053381756, b: -0.9985742, a: 0}
-    - MyLightPosition: {r: -73.88, g: 6.92, b: -34.1669, a: 0}
     - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}

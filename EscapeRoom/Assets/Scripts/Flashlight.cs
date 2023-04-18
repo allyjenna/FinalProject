@@ -75,14 +75,7 @@ public class Flashlight : MonoBehaviour
                         Mat.SetVector("MyLightDirection", -SpotLight.transform.forward);
                         Mat.SetFloat("MyLightAngle", SpotLight.spotAngle);
                     }
-                    else
-                    {
-                        //Light.SetActive(false);
-                        //LightActive = false;
-                        //Mat.SetVector("MyLightPosition", Vector3.zero);
-                        //Mat.SetVector("MyLightDirection", Vector3.zero);
-                        //Mat.SetFloat("MyLightAngle", 0f);
-                    }
+                   
                 }
             }
 
