@@ -10,6 +10,8 @@ public class GalleryDoorController : MonoBehaviour
     public Canvas galleryCanvas;
 
     private bool canvasEnabled;
+    private bool canvasAlreadyShown = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,13 +34,15 @@ public class GalleryDoorController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == targetCollider)
+        if (!canvasAlreadyShown && other.gameObject == targetCollider)
         {
             Debug.Log("COLLISION");
             galleryDoor.SetActive(true); // Activate the door game object
             doorBlock.SetActive(true);
             galleryCanvas.enabled = true;
             canvasEnabled = true;
+            canvasAlreadyShown = true;
+
         }
     }
 }

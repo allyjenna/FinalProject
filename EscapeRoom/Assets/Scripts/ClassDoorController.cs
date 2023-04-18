@@ -9,7 +9,8 @@ public class ClassDoorController : MonoBehaviour
     public GameObject targetCollider;
     public Canvas classCanvas;
 
-    private bool canvasEnabled;
+    private bool canvasEnabled = false;
+    private bool canvasAlreadyShown = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,6 @@ public class ClassDoorController : MonoBehaviour
         classDoor.SetActive(false);
         doorBlock.SetActive(false);
         classCanvas.enabled = false;
-        canvasEnabled = false;
     }
 
     // Update is called once per frame
@@ -32,13 +32,14 @@ public class ClassDoorController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == targetCollider)
+        if (!canvasAlreadyShown && other.gameObject == targetCollider)
         {
             Debug.Log("COLLISION");
             classDoor.SetActive(true); // Activate the door game object
             doorBlock.SetActive(true);
             classCanvas.enabled = true;
             canvasEnabled = true;
+            canvasAlreadyShown = true;
         }
     }
 }
