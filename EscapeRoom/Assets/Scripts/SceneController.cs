@@ -19,10 +19,7 @@ public class SceneController : MonoBehaviour
     public Vector3 targetPosition2;
     public Vector3 targetPosition3;
     public GameObject galleryDoor;
-    public GameObject rope1;
-    public GameObject rope2;
-    public GameObject rope3;
-
+ 
 
 
 
@@ -67,7 +64,6 @@ public class SceneController : MonoBehaviour
             switch2.SetActive(true);
             player.transform.position = targetPosition1;
             player.transform.rotation = Quaternion.Euler(0f, 90f, 0f); // Rotate 90 degrees on Y-axis
-            rope1.SetActive(false);
 
 
             Debug.Log("Showing Object1Replace");
@@ -83,8 +79,7 @@ public class SceneController : MonoBehaviour
             switch2.SetActive(true);
             player.transform.position = targetPosition2;
             player.transform.rotation = Quaternion.Euler(0f, 90f, 0f); // Rotate 90 degrees on Y-axis
-            rope1.SetActive(false);
-            rope2.SetActive(false);
+     
 
 
             Debug.Log("Showing Object2Replace");
@@ -104,9 +99,7 @@ public class SceneController : MonoBehaviour
             switch2.SetActive(true);
             player.transform.position = targetPosition3;
             player.transform.rotation = Quaternion.Euler(0f, 90f, 0f); // Rotate 90 degrees on Y-axis
-            rope1.SetActive(false);
-            rope2.SetActive(false);
-            rope3.SetActive(false);
+          
 
 
             Debug.Log("Showing Object3Replace");
